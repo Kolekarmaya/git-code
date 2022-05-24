@@ -10,6 +10,7 @@ import { PortfolioModule } from './portfolio/portfolio.module';
 import { HeaderComponent } from './head,footer/header/header.component';
 import { FooterComponent } from './head,footer/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,8 @@ import {HttpClientModule} from '@angular/common/http';
     OurserviceModule,
     PortfolioModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
    
   ],
   providers: [],

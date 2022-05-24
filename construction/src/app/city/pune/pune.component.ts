@@ -13,7 +13,11 @@ public table1:any;
 public table2:any;
 public table3:any;
 public table4:any;
-  constructor(private data:DataserviceService, private route:Router) { }
+public table5:any;
+public table6:any;
+link1:any;
+
+constructor(private data:DataserviceService, private route:Router) { }
 
   ngOnInit(): void {
     this.getalldata();
@@ -27,8 +31,18 @@ getalldata(){
     this.table2=res[1];
     this.table3=res[2];
     this.table4=res[3];
+    this.table5=res[4];
+    this.table6=res[5];
+    
     
   })
 }
+onRegistration(){
+  this.route.navigate(['city/registration'])
+}
+onlogin(){
+  this.route.navigate(['city/login'])
+}
+
 
 }

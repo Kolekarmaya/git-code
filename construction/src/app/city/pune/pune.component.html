@@ -1,75 +1,112 @@
-<div class="main-container">
-    <div class="heading">
-        <h1 class="heading__title">Gradient Banner Cards</h1>
-        <p class="heading__credits"><a class="heading__link" target="_blank" href="https://dribbble.com/sl">Design by
-                Simon Lurwer on Dribbble</a></p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8">
+        <h1>Registration</h1>
+        </div>
+        <div class="col-2 ">
+             <button class="btn login  " (click)="onRegistration()">Registration </button>
+        </div>     
+        <div class="col-2">
+            
+             <button class="btn login justify-content-start" (click)="onlogin()">Login </button>
+        </div>   
+       
+        
     </div>
-    <div class="cards">
-        <div class="card card-1">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h4 class="card__title">
-                <div class="row" *ngIf="table1">
-                  <h2>{{table1.company_name}}</h2>  
-                    {{table1.contact_number}}
-                    {{table1.address}}
-                    {{table1.email}}
 
-                </div>
-            </h4>
-            <p class="card__apply">
-                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
-            </p>
+    <div class="heading">
+        <h1 class="heading__title">Pune Builders </h1>
+    </div>
+
+    <div class="cards ">
+        <div class="row">
+            <div class="card card-1">
+                <h4 class="card__title">
+                    <div class="row" *ngIf="table1">
+                        <h2>{{table1.company_name}}</h2>
+                        {{table1.contact_number}}
+                        {{table1.address}}
+                        {{table1.email}}
+
+                    </div>
+                </h4>
+                <p class="card__apply">
+                    <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+            <div class="card card-2">
+                <h4 class="card__title">
+                    <div class="row" *ngIf="table2">
+                        <h2>{{table2.company_name}}</h2>
+                        {{table2.contact_number}}
+                        {{table2.address}}
+                        {{table2.email}}
+
+                    </div>
+                </h4>
+                <p class="card__apply">
+                    <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+            <div class="card card-3">
+                <h4 class="card__title">
+                    <div class="row" *ngIf="table3">
+                        <h2>{{table3.company_name}}</h2>
+                        {{table3.contact_number}}
+                        {{table3.address}}
+                        {{table3.email}}
+
+                    </div>
+                </h4>
+                <p class="card__apply">
+                    <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
         </div>
-        <div class="card card-2">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h4 class="card__title">
-                <div class="row" *ngIf="table2">
-                  <h2>{{table2.company_name}}</h2>  
-                    {{table2.contact_number}}
-                    {{table2.address}}
-                    {{table2.email}}
+        <div class="row">
+            <div class="card card-4">
+                <h4 class="card__title">
+                    <div class="row" *ngIf="table4">
+                        <h2>{{table4.company_name}}</h2>
+                        {{table4.contact_number}}
+                        {{table4.address}}
+                        {{table4.email}}
 
-                </div>
-            </h4>
-            <p class="card__apply">
-                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
-            </p>
+                    </div>
+                </h4>
+                <p class="card__apply">
+                    <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+            <div class="card card-5">
+                <h4 class="card__title">
+                    <div class="row" *ngIf="table5">
+                        <h2>{{table5.company_name}}</h2>
+                        {{table5.contact_number}}
+                        {{table5.address}}
+                        {{table5.email}}
+
+                    </div>
+                </h4>
+                <p class="card__apply">
+                    <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+            <div class="card card-6">
+                <h4 class="card__title">
+                    <div class="row" *ngIf="table6">
+                        <h2>{{table6.company_name}}</h2>
+                        {{table6.contact_number}}
+                        {{table6.address}}
+                        {{table6.email}}
+
+                    </div>
+                </h4>
+                <p class="card__apply">
+                    <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
         </div>
-        <div class="card card-3">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h4 class="card__title">
-                <div class="row" *ngIf="table3">
-                  <h2>{{table3.company_name}}</h2>  
-                    {{table3.contact_number}}
-                    {{table3.address}}
-                    {{table3.email}}
-
-                </div>
-            </h4>
-            <p class="card__apply">
-                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
-            </p>
-        </div>
-        <div class="card card-4">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h4 class="card__title">
-                <div class="row" *ngIf="table4">
-                  <h2>{{table4.company_name}}</h2>  
-                    {{table4.contact_number}}
-                    {{table4.address}}
-                    {{table4.email}}
-
-                </div>
-            </h4>
-            <p class="card__apply">
-                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
-            </p>
-        </div>
-
 
     </div>
 </div>
