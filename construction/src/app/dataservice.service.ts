@@ -9,12 +9,17 @@ export class DataserviceService {
   constructor(private http: HttpClient) {
 
   }
+  // pune
   getDate(){
     return this.http.get('http://localhost:3000/api/getAllpuneAddress');
   }
-  postData(data:any){
-    return this.http.post('http://localhost:3000/api/insertCourses',data);
-   }
+  sendData(FormData:any){
+    return this.http.post('https://jsonplaceholder.typicode.com/users/',FormData)
+  }
    
+// Mumbai
+getbackend(){
+    return this.http.get('http://localhost:3000/api/getAllmumbaiAdress');
+  }
 
 }

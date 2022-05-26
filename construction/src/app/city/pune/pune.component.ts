@@ -43,6 +43,24 @@ onRegistration(){
 onlogin(){
   this.route.navigate(['city/login'])
 }
+onlarsen(){
+  this.route.navigate(['city/l'])
+}
 
+onMantri(){
+
+}
+onLele(){
+
+}
+onDeep(){
+
+}
+onRahul(){
+
+}
+onParamar(){
+  
+}
 
 }

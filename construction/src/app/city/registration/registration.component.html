@@ -6,25 +6,36 @@
     <div class="text-start">
         <form [formGroup]="registration" (ngSubmit)="Submit()">
             <div class="form-group col-6">
-                <label for="" >Name</label>
-                <input type="text" class="form-control" formControlName="name"  >
-            </div>
+                <label for="" >Name <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" formControlName="name"  required [ngClass]="{'is-invalid':isSubmitted && f.name.errors}">
+                <div *ngIf="isSubmitted && f.name.errors?.required"><span style="color: red;">required name</span></div>
+            </div> 
+            
             <div class="form-group col-6">
-                <label for="" >Age</label>
-                <input type="text" class="form-control" formControlName="age">
-            </div>
+                <label for="" >Email<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" formControlName="age" required [ngClass]="{'is-invalid':isSubmitted && f.Email.errors}">
+                <div *ngIf="isSubmitted && f.Email.errors?.required"><span style="color: red;">required Email</span></div>
+            </div> 
+           
             <div class="form-group col-6">
-                <label for="" >EmpId</label>
-                <input type="text" class="form-control" formControlName="empId" >
-            </div>
+                <label for="" >pass<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" formControlName="empId" required [ngClass]="{'is-invalid':isSubmitted && f.pass.errors}">
+                <div *ngIf="isSubmitted && f.pass.errors?.required"><span style="color: red;">required password</span></div>
+            </div> 
+            
             <div class="form-group col-6">
-                <label for="" >Branch</label>
-                <input type="text" class="form-control" formControlName="branch">
-            </div>
+                <label for="" >cpass <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" formControlName="branch"required [ngClass]="{'is-invalid':isSubmitted && f.cpass.errors}">
+                <div *ngIf="isSubmitted && f.cpass.errors?.required"><span style="color: red;">required confirmpass</span></div>
+            </div> 
+            
             <div class="form-group col-6"> 
-                <label for="" >Role</label>
-                <input type="text" class="form-control" formControlName="role" >
-            </div>
+                <label for="" >Role<span style="color: red;">*</span></label>
+                <select>
+                    <input *ngFor="let mk of name">{{name}}
+                </select>
+            </div>  
+            
             <div class="d-grid gap-2 col-6">
                 <input type="submit" class="btn btn-success px-5 py-2 my-3" value="Send Data">
             </div>

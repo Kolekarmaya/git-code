@@ -6,12 +6,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LComponent } from './pune/l/l.component';
+import { MantriComponent } from './pune/mantri/mantri.component';
+import { LeleComponent } from './pune/lele/lele.component';
+import { DeepComponent } from './pune/deep/deep.component';
+import { RahulComponent } from './pune/rahul/rahul.component';
+import { ParamarComponent } from './pune/paramar/paramar.component';
 
 const route:Routes=[
   {path:'mumbai',component:MumbaiComponent},
   {path:'pune',component:PuneComponent},
   {path:'registration',component:RegistrationComponent},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path:'deep', component:DeepComponent},
+  {path:'l',component:LComponent},
+  {path:'lele',component:LeleComponent},
+  {path:'mantri',component:MantriComponent},
+  {path:'paramar',component:ParamarComponent},
+  {path:'rahul',component:RahulComponent}
 ]
 
 
@@ -20,7 +32,13 @@ const route:Routes=[
     MumbaiComponent,
     PuneComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LComponent,
+    MantriComponent,
+    LeleComponent,
+    DeepComponent,
+    RahulComponent,
+    ParamarComponent
   ],
   imports: [
     CommonModule,
