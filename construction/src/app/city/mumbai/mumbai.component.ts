@@ -20,23 +20,23 @@ export class MumbaiComponent implements OnInit {
   constructor(private data:DataserviceService, private route:Router) { }
 
   ngOnInit(): void {
-    this.getalldata();
+    // this.getalldata();
   }
 
-  getalldata(){
-    this.data.getbackend().subscribe((res:any)=>{
-      console.log(res);
-      this.value=res;
-      this.table1=res[0];
-      this.table2=res[1];
-      this.table3=res[2];
-      this.table4=res[3];
-      this.table5=res[4];
-      this.table6=res[5];
+  // getalldata(){
+  //   this.data.getbackend().subscribe((res:any)=>{
+  //     console.log(res);
+  //     this.value=res;
+  //     this.table1=res[0];
+  //     this.table2=res[1];
+  //     this.table3=res[2];
+  //     this.table4=res[3];
+  //     this.table5=res[4];
+  //     this.table6=res[5];
       
       
-    })
-  }
+  //   })
+  // }
 
   onRegistration(){
     this.route.navigate(['city/registration'])

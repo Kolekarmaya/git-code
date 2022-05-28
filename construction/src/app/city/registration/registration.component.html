@@ -1,4 +1,4 @@
-
+<!-- 
 
 <div class="container-fluid">
     <h1 >Registration</h1>
@@ -7,32 +7,33 @@
         <form [formGroup]="registration" (ngSubmit)="Submit()">
             <div class="form-group col-6">
                 <label for="" >Name <span style="color: red;">*</span></label>
-                <input type="text" class="form-control" formControlName="name"  required [ngClass]="{'is-invalid':isSubmitted && f.name.errors}">
+                <input type="text" class="form-control" formControlName="name" >
                 <div *ngIf="isSubmitted && f.name.errors?.required"><span style="color: red;">required name</span></div>
             </div> 
             
             <div class="form-group col-6">
                 <label for="" >Email<span style="color: red;">*</span></label>
-                <input type="text" class="form-control" formControlName="age" required [ngClass]="{'is-invalid':isSubmitted && f.Email.errors}">
+                <input type="text" class="form-control" formControlName="Email" required [ngClass]="{'is-invalid':isSubmitted && f.Email.errors}">
                 <div *ngIf="isSubmitted && f.Email.errors?.required"><span style="color: red;">required Email</span></div>
             </div> 
            
             <div class="form-group col-6">
-                <label for="" >pass<span style="color: red;">*</span></label>
-                <input type="text" class="form-control" formControlName="empId" required [ngClass]="{'is-invalid':isSubmitted && f.pass.errors}">
+                <label for="" >password<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" formControlName="pass" required [ngClass]="{'is-invalid':isSubmitted && f.pass.errors}">
                 <div *ngIf="isSubmitted && f.pass.errors?.required"><span style="color: red;">required password</span></div>
             </div> 
             
             <div class="form-group col-6">
-                <label for="" >cpass <span style="color: red;">*</span></label>
-                <input type="text" class="form-control" formControlName="branch"required [ngClass]="{'is-invalid':isSubmitted && f.cpass.errors}">
-                <div *ngIf="isSubmitted && f.cpass.errors?.required"><span style="color: red;">required confirmpass</span></div>
+                <label for="" >confirmpassword <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" formControlName="cpass"required [ngClass]="{'is-invalid':isSubmitted && f.cpass.errors}">
+                <div *ngIf="isSubmitted && f.cpass.errors?.required"><span style="color: red;">required confirmpassword</span></div>
             </div> 
-            
+            <br>
             <div class="form-group col-6"> 
                 <label for="" >Role<span style="color: red;">*</span></label>
                 <select>
-                    <input *ngFor="let mk of name">{{name}}
+                    <option value="Admin">Admin</option>
+                    <option value="User">User</option>
                 </select>
             </div>  
             
@@ -42,4 +43,40 @@
         </form>
     </div>
     </div>
+</div> -->
+
+<p>reactive works!</p>
+
+<div class="card">
+    <div class="text-center">
+        <form [formGroup]="registration" (ngSubmit)="Submit()">
+            <div class="form-group col-6">
+                <label for="" >Name</label>
+                <input type="text" class="form-control" formControlName="name"  >
+            </div>
+            <div class="form-group col-6">
+                <label for="" >Age</label>
+                <input type="text" class="form-control" formControlName="age">
+            </div>
+            <div class="form-group col-6">
+                <label for="" >EmpId</label>
+                <input type="text" class="form-control" formControlName="empId" >
+            </div>
+            <div class="form-group col-6">
+                <label for="" >Branch</label>
+                <input type="text" class="form-control" formControlName="branch">
+            </div>
+            <div class="form-group col-6"> 
+                <label for="" >Role</label>
+                <input type="text" class="form-control" formControlName="role" >
+            </div>
+            <div class="d-grid gap-2 col-6">
+                <input type="submit" class="btn btn-success px-5 py-2 my-3" value="Send Data">
+            </div>
+        </form>
+    </div>
 </div>
+
+
+
+

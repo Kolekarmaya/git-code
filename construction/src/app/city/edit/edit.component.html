@@ -1,0 +1,37 @@
+<p>edit works!</p>
+
+<div class="card">
+    <div class="text-center">
+        <form [formGroup]="updateform" (ngSubmit)="updatedata()">
+            <div class="form-group col-6">
+                <label for="" >Name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="form-group col-6">
+                <label for="" >Age</label>
+                <input type="text" class="form-control" formControlName="age">
+            </div>
+            <div class="form-group col-6">
+                <label for="" >EmpId</label>
+                <input type="text" class="form-control" formControlName="empId" >
+            </div>
+            <div class="form-group col-6">
+                <label for="" >Branch</label>
+                <input type="text" class="form-control" formControlName="branch">
+            </div>
+            <div class="form-group col-6"> 
+                <label for="" >Role</label>
+                <input type="text" class="form-control" formControlName="role" >
+            </div>
+            <div class="d-grid gap-2 col-6">
+                <input type="submit" class="btn btn-success px-5 py-2 my-3" value="update">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+

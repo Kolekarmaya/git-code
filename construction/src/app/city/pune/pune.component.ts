@@ -24,7 +24,7 @@ constructor(private data:DataserviceService, private route:Router) { }
   }
 
 getalldata(){
-  this.data.getDate().subscribe((res:any)=>{
+  this.data.getData().subscribe((res:any)=>{
     console.log(res);
     this.value=res;
     this.table1=res[0];

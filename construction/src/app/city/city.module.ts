@@ -12,6 +12,10 @@ import { LeleComponent } from './pune/lele/lele.component';
 import { DeepComponent } from './pune/deep/deep.component';
 import { RahulComponent } from './pune/rahul/rahul.component';
 import { ParamarComponent } from './pune/paramar/paramar.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
+import { EditComponent } from './edit/edit.component';
+
 
 const route:Routes=[
   {path:'mumbai',component:MumbaiComponent},
@@ -23,7 +27,10 @@ const route:Routes=[
   {path:'lele',component:LeleComponent},
   {path:'mantri',component:MantriComponent},
   {path:'paramar',component:ParamarComponent},
-  {path:'rahul',component:RahulComponent}
+  {path:'rahul',component:RahulComponent},
+  {path:'admin',component:AdminComponent},
+  {path:'edit',component:EditComponent}
+  
 ]
 
 
@@ -38,7 +45,11 @@ const route:Routes=[
     LeleComponent,
     DeepComponent,
     RahulComponent,
-    ParamarComponent
+    ParamarComponent,
+    AdminComponent,
+    UserComponent,
+    EditComponent,
+    
   ],
   imports: [
     CommonModule,

@@ -12,40 +12,57 @@ export class RegistrationComponent implements OnInit {
   isSubmitted:boolean=false;
   registration:any;
   sub:any;
-  name:any=['User','Admin']
+  // name:any=['User','Admin']
+  city:any;
+ 
 
 
-  constructor(private fb: FormBuilder, private form:DataserviceService, private roue:Router) { }
+
+  constructor(private fb: FormBuilder, private form:DataserviceService, private route:Router) {}
 
   ngOnInit(): void {
     this.registration =this.fb.group({
       name:['',[Validators.required]],
-      Email:['',[Validators.required, Validators.pattern(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
-      pass:['',[Validators.required]],
-      cpass:['',[Validators.required]],
-     
+      age:['',[Validators.required]],
+      empId:['',[Validators.required]],
+      branch:['',[Validators.required]],
+      role:['',[Validators.required]],
+      
+
     })
   }
   
   Submit(){
     console.log(this.registration);
     console.log(this.registration.value);
-    this.isSubmitted=true;
-
-    this.form.sendData(this.registration.value).subscribe((res:any)=>
+    this.form.postData(this.registration.value).subscribe((res:any)=>
     {
       console.log(res);
-
-    },
-    (err:any)=>{
-      console.log(err);
-    }
-    )
-    
-
+    })
+    this.isSubmitted=true;
+      this.route.navigate(['admin']);
+  //     // Validators.pattern(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)
   }
+
+
+
+  // updatedata(){
+  //   console.log(this.registration.value);
+  //   this.form.editData(this.datapoint, this.datapoint.value).subscribe((res:any)=>{
+  //     console.log(res);
+  //   })
+  //   this.isSubmitted=true;
+  //   this.route.navigate(['admin'])
+
+  // }
+
+
   get f(){
     return this.registration.controls;
   
   }
 }
+
+
+
+

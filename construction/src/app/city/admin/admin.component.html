@@ -1,0 +1,30 @@
+<p>crud works!</p>
+<div class="container">
+        
+    <table class="table table-stripped">
+        <!-- <button (click)="AddData()" pButton type="button" class="p-button-warning">AddData </button> -->
+        
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age </th>
+            <th>EmpId</th>
+            <th>Branch</th>
+            <th>Role</th>
+            <th>Edit</th>
+            <th>Delete</th>  
+        </tr>
+        <tr *ngFor="let dt of Data">
+            <td>{{dt.id}}</td>
+            <td >{{dt.name}}</td>
+            <td >{{dt.age}}</td>
+            <td >{{dt.empId}}</td>
+            <td >{{dt.branch}}</td>
+            <td >{{dt.role}}</td>
+            <td>   <button (click)="onEdit(dt.id, dt)" pButton type="button"  class="p-button-warning">Edit </button> </td>
+            <td>  <button (click)="onDelete(dt.id)" pButton type="button"  class="p-button-warning"> Delete</button> </td>
+        </tr>
+    </table>
+</div>
+
+
