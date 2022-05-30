@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataserviceService } from 'src/app/dataservice.service';
 
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -57,6 +58,9 @@ onDelete(data1:any){
         this.getalldata1();
      }
   })
+ }
+ home(){
+   this.route.navigate(['home'])
  }
 
 }

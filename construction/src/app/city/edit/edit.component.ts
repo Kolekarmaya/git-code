@@ -41,6 +41,12 @@ export class EditComponent implements OnInit {
       this.route.navigate(['admin'])
   
     }
+    home(){
+      this.route.navigate(['home'])
+    }
+    admin(){
+      this.route.navigate(['admin'])
+    }
     
     get f(){
       return this.updateform.controls

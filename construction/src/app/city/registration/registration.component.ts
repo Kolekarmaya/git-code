@@ -45,16 +45,9 @@ export class RegistrationComponent implements OnInit {
   }
 
 
-
-  // updatedata(){
-  //   console.log(this.registration.value);
-  //   this.form.editData(this.datapoint, this.datapoint.value).subscribe((res:any)=>{
-  //     console.log(res);
-  //   })
-  //   this.isSubmitted=true;
-  //   this.route.navigate(['admin'])
-
-  // }
+  home(){
+    this.route.navigate(['home'])
+  }
 
 
   get f(){

@@ -20,7 +20,10 @@ export class DataserviceService {
    getData(){
      return this.http.get('http://localhost:3000/api/getAllpuneAddress')
    }
-
+//mumbai
+getbackend(){
+  return this.http.get('http://localhost:3000/api/getAllmumbaiAdress')
+}
 
   //  rehistration
   getData1(){

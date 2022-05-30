@@ -37,30 +37,20 @@ getalldata(){
     
   })
 }
+home(){
+  this.route.navigate(['home'])
+}
 onRegistration(){
   this.route.navigate(['city/registration'])
 }
 onlogin(){
   this.route.navigate(['city/login'])
 }
-onlarsen(){
-  this.route.navigate(['city/l'])
-}
-
-onMantri(){
-
-}
-onLele(){
-
-}
-onDeep(){
-
-}
-onRahul(){
-
-}
-onParamar(){
-  
-}
+onlarsen(){}
+onMantri(){}
+onLele(){}
+onDeep(){}
+onRahul(){}
+onParamar(){}
 
 }
