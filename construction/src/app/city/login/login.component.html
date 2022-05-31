@@ -1,24 +1,38 @@
-<p>login works!</p>
+<div class="container-fluid">
+    <button class="btn btn-success justify-content-end" (click)="home()"><b>Home</b></button>
+    <div class="card">
+        <div class="text-center">
+            <form [formGroup]="loginform" (ngSubmit)="OnSubmitForm()">
+                <h1 class="text-center ">Login Form</h1>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Name: <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" formControlName="name"
+                            placeholder="Enter User name Here " required
+                            [ngClass]="{'is-invalid': isSubmitted && f.name.errors}">
+                        <div *ngIf="isSubmitted && f.name.errors?.required" class="invalid-form"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Password: <span style="color: red;">*</span></label>
+                        <input type="password" class="form-control" formControlName="empId"
+                            placeholder="Enter User password Here ">
+                    </div>
+                </div>
+                <div class="row d-grid gap-2 col-6 mx-auto mt-2">
+                    <div class="form-group">
+                        <input type="submit" value="Sumbit" class="btn btn-primary form-control ">
+                    </div>
+                </div>
 
+                <div class="d-grid gap-2 ">
+                    <button id="r1" pButton type="button" value="submit" label="New User ?" (click)="NewUser()"
+                        class="btn login">Registration/NewUser</button>
+                </div>
 
-<!-- 
-<form name="form" ng-submit="login()" role="form">
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" class="form-control">  
+            </form>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        
-        <input type="password" name="password" id="password" class="form-control" >
-        
-    </div>
-    <div class="form-actions">
-        <button (click)="login()" pButton type="button"  class="p-button-warning">Edit </button>
-    </div>
-</form> -->
-
-
-
-
+</div>
 

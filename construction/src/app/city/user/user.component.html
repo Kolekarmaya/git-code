@@ -1,1 +1,24 @@
-<p>user works!</p>
+<div class="text-center">
+    <h3 class="alert alert-success text-dark">Welcome {{gotUser.name}} to the User Profile....
+    </h3>
+</div>
+<table class="table table-bordered text-success">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>EmpId</th>
+        <th>Age</th>
+        <th>Role</th>
+        <th>Branch</th>
+        <th>Edit</th>
+    </tr>
+    <tr>
+        <td>{{gotUser.id}}</td>
+        <td>{{gotUser.name}}</td>
+        <td>{{gotUser.empId}}</td>
+        <td>{{gotUser.age}}</td>
+        <td>{{gotUser.role}}</td>
+        <td>{{gotUser.branch}}</td>
+        <td><button pButton type="button" class="p-button-warning" (click)=OnEditData(gotUser.id,gotUser)>Edit</button></td>
+    </tr>
+</table>

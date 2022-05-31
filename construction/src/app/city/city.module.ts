@@ -17,7 +17,8 @@ const route:Routes=[
   {path:'registration',component:RegistrationComponent},
   {path:'login',component:LoginComponent},
   {path:'admin',component:AdminComponent},
-  {path:'edit',component:EditComponent}
+  {path:'edit',component:EditComponent},
+  {path:'user',component:UserComponent}
   
 ]
 

@@ -1,35 +1,40 @@
-
 <div class="container-fluid">
-    <button class="btn btn-info " (click)="home()"><b>Home</b></button>
-    <button class="btn btn-info mx-3" (click)="admin()"><b>Admin</b></button>
+    <button class="btn btn-success justify-content-end" (click)="home()"><b>Home</b></button>
     <h1>Updateform</h1>
     <div class="card">
         <div class="text-center">
-            <form [formGroup]="updateform" (ngSubmit)="updatedata()">
+            <form [formGroup]="updateform" (ngSubmit)="updateform()">
                 <div class="form-group col-6">
-                    <label for="">Name</label>
+                    <label for="">Name<span style="color: red;">*</span></label>
                     <input type="text" class="form-control" formControlName="name">
                 </div>
                 <div class="form-group col-6">
-                    <label for="">Age</label>
+                    <label for="">Age <span style="color: red;">*</span></label>
                     <input type="text" class="form-control" formControlName="age">
                 </div>
                 <div class="form-group col-6">
-                    <label for="">EmpId</label>
+                    <label for="">EmpId <span style="color: red;">*</span></label>
                     <input type="text" class="form-control" formControlName="empId">
                 </div>
                 <div class="form-group col-6">
-                    <label for="">Branch</label>
-                    <input type="text" class="form-control" formControlName="branch">
+                    <label for=""> password <span style="color: red;">*</span></label>
+                    <input type="password" formControlName="empId" class="form-control" placeholder="Enter empId Here"
+                        required [ngClass]="{'is-invalid': isSubmitted && f.empId.errors}">
+                    <div *ngIf="isSubmitted && f.empId.errors?.required" class="invalid-feedback">Enter Valid Password
+                    </div>
                 </div>
                 <div class="form-group col-6">
-                    <label for="">Role</label>
-                    <input type="text" class="form-control" formControlName="role">
+                    <label for="" >Role: <span style="color: red;">*</span></label> <br>
+                    <input type="radio" formControlName="role" value="admin" name="role"><span style="color: white;">Admin</span><br>
+                    <input type="radio" formControlName="role" value="user" name="role"><span style="color: white;">User</span>
                 </div>
-                <div class="d-grid gap-2 col-6">
-                    <input type="submit" class="btn btn-success px-5 py-2 my-3" value="update">
+
+                <div class="d-grid gap-2  ">
+                    <input type="submit" value="submit" class="btn btn-primary form-control">
                 </div>
+               
             </form>
         </div>
     </div>
 </div>
+

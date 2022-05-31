@@ -9,53 +9,46 @@ import { DataserviceService } from 'src/app/dataservice.service';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  isSubmitted:boolean=false;
-  registration:any;
-  sub:any;
-  // name:any=['User','Admin']
-  city:any;
- 
 
+isSubmitted:boolean=false;
+public registration:any;
 
+constructor(private fb:FormBuilder, private route:Router, private ser:DataserviceService) { }
 
-  constructor(private fb: FormBuilder, private form:DataserviceService, private route:Router) {}
-
-  ngOnInit(): void {
-    this.registration =this.fb.group({
+ngOnInit(): void {
+  this.registration=this.fb.group({
       name:['',[Validators.required]],
-      age:['',[Validators.required]],
-      empId:['',[Validators.required]],
-      branch:['',[Validators.required]],
       role:['',[Validators.required]],
-      
+      empId:['',[Validators.required]],
+      age:['',[Validators.required]],
+      branch:['',[Validators.required]],
+  })
+}
+Submit(){
+  this.registration.value;
+  console.log(this.registration.value);
+  this.isSubmitted=true;
+  this.route.navigate(['login']);
 
-    })
+  this.ser.postData(this.registration.value).subscribe((res)=>{
+    console.log(res);
+  })
+
+}
+  AlreadyUser(){
+    this.route.navigate(['login']);
   }
-  
-  Submit(){
-    console.log(this.registration);
-    console.log(this.registration.value);
-    this.form.postData(this.registration.value).subscribe((res:any)=>
-    {
-      console.log(res);
-    })
-    this.isSubmitted=true;
-      this.route.navigate(['admin']);
-  //     // Validators.pattern(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)
-  }
-
-
   home(){
-    this.route.navigate(['home'])
-  }
-
+        this.route.navigate(['home'])
+      }
+    
+  
 
   get f(){
     return this.registration.controls;
-  
   }
-}
 
+}
 
 
 

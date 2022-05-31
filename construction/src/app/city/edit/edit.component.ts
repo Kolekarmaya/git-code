@@ -13,6 +13,9 @@ export class EditComponent implements OnInit {
   dataPoint:any;
   isSubmitted:boolean=false;
   
+  public myform:any;
+  public update:any;
+  
     constructor(private data:DataserviceService, private fb:FormBuilder, private route:Router) { 
       this.data.getMessage().subscribe((res:any)=>{
         console.log(res);
@@ -27,7 +30,6 @@ export class EditComponent implements OnInit {
         name:[this.dataPoint.name],
         age:[this.dataPoint.age],
         empId:[this.dataPoint.empId],
-        branch:[this.dataPoint.branch],
         role:[this.dataPoint.role],
       })
     }

@@ -11,7 +11,7 @@ export class DataserviceService {
   public data:any= new BehaviorSubject('');
   public currentId=this.id.asObservable();
   public currentData=this.data.asObservable();
- 
+  
   constructor(private http: HttpClient) {
 
   }
@@ -25,7 +25,7 @@ getbackend(){
   return this.http.get('http://localhost:3000/api/getAllmumbaiAdress')
 }
 
-  //  rehistration
+  // //  registration
   getData1(){
     return this.http.get('http://localhost:3000/api/getAllCourses');
    }
@@ -47,6 +47,6 @@ getbackend(){
     return this.http.delete('http://localhost:3000/api/deleteCourses/'+id);
   }
 
-
-
 }
+
+

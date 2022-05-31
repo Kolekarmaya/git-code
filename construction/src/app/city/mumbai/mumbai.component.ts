@@ -45,6 +45,9 @@ export class MumbaiComponent implements OnInit {
   onlogin(){
     this.route.navigate(['city/login'])
   }
+  home(){
+    this.route.navigate(['home'])
+  }
 
 
 }

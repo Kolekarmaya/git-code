@@ -12,7 +12,10 @@ export class AdminComponent implements OnInit {
   public Data: any;
   public city: any;
   deleteData:any;
-  
+  newdata:any;
+
+  // NewDeletedData:any;
+  // NewData:any;
 
   constructor(private data: DataserviceService, private route:Router) {
     this.getalldata1();
@@ -30,6 +33,7 @@ export class AdminComponent implements OnInit {
         console.log(res);
         this.Data=res;
         this.deleteData=res;
+        this.newdata=res;
       })
 
   }
@@ -62,8 +66,9 @@ onDelete(data1:any){
  home(){
    this.route.navigate(['home'])
  }
+ 
+
 
 }
 
  
-
